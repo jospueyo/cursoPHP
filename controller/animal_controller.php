@@ -24,7 +24,7 @@ class AnimalController
   public function save()
   {
     $animal=new Animal();
-    $animal->id==$_REQUEST['id'];
+    $animal->id=$_REQUEST['id'];
     $animal->name=$_REQUEST['name'];
     $animal->specie=$_REQUEST['specie'];
     $animal->breed=$_REQUEST['breed'];
@@ -33,6 +33,7 @@ class AnimalController
     $animal->age=$_REQUEST['age'];
 
     echo var_dump($animal->id);
+    echo var_dump($animal->name);
 
     if($animal->id>0){
       echo 'Update';

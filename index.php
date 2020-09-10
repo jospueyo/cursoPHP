@@ -8,9 +8,8 @@ if (!isset($_REQUEST['controller'])) {
   $controller=$_REQUEST['controller'];
   $action=$_REQUEST['action'];
   require_once 'controller/'.$controller.'_controller.php';
-  $controller=ucwords($controller).'Controller';
+  $controller =ucwords($controller).'Controller';
   $controller=new $controller;
-  call_user_func([$controller,$action]);
+  call_user_func(array($controller,$action));
 }
-
  ?>
